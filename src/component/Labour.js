@@ -23,7 +23,7 @@ export default function Labour() {
    <Stack
       component="form"
       sx={{
-        width: '35ch',
+        width: '40ch',
       }}
       spacing={2}
       noValidate
