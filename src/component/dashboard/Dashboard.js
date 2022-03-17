@@ -161,7 +161,7 @@ function DashboardContent() {
             <PersistentDrawerLeft />
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12} md={6} >
                 <Paper
                   sx={{
                     p: 2,
@@ -175,8 +175,8 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
+              <Grid item xs={12} md={6} >
+                <Box
                   sx={{
                     p: 2,
                     display: 'flex',
@@ -234,7 +234,7 @@ function DashboardContent() {
               </AccordionDetails>
             </Accordion>
           </div>
-                </Paper>
+                </Box>
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12}>
