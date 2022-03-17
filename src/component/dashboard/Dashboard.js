@@ -13,13 +13,12 @@ import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
-
 import Orders from './Orders';
 import Labour from '../Labour';
 import Accordion from "@mui/material/Accordion";
@@ -29,19 +28,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Diamonds from '../Diamonds';
 import Misc from '../Misc';
 import Cam from '../Cam';
-import  Person  from '../Person';
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+
+import PersistentDrawerLeft from './../PersistentDrawerLeft';
+
 
 const drawerWidth = 240;
 
@@ -169,6 +158,7 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <PersistentDrawerLeft />
             <Grid container spacing={3}>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
@@ -180,6 +170,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
+                 
                   <Chart />
                 </Paper>
               </Grid>
@@ -249,11 +240,11 @@ function DashboardContent() {
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Orders />
-                  <Person />
+                  
                 </Paper>
               </Grid>
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
+           
           </Container>
         </Box>
       </Box>

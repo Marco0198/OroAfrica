@@ -7,16 +7,20 @@ import FormLabel from '@mui/material/FormLabel';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
+import  Paper  from '@mui/material/Paper';
 
 
 export default function Person() {
 
   return (
-    <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+    <>
+   
+      <Box >
+      <Typography sx={{ textAlign:'left',marginLeft:8}} variant="h6" gutterBottom>
         Person
       </Typography>
-      <Grid container spacing={3}>
+    
+      <Grid container spacing={3} sx={{ width:600 ,margin:5}} >
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -39,28 +43,8 @@ export default function Person() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            id="address"
-            name="address"
-            label="Address"
-            fullWidth
-            autoComplete=""
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id="telephone"
-            name="telephone"
-            label="Telephone"
-            fullWidth
-            autoComplete="shipping address-line2"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
+    
+        <Grid item xs={12} sm={6} >
           <TextField
             required
             id="emaol"
@@ -73,6 +57,18 @@ export default function Person() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+           required
+            id="telephone"
+            name="telephone"
+            label="Telephone"
+            fullWidth
+            autoComplete="shipping address-line2"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} >
+          <TextField
+           required
             id="account"
             name="account"
             label="Account"
@@ -80,55 +76,42 @@ export default function Person() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12}>
           <TextField
             required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
+            id="address"
+            name="address"
+            label="Address"
             fullWidth
-            autoComplete="shipping postal-code"
+            autoComplete=""
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            fullWidth
-            autoComplete="shipping country"
-            variant="standard"
-          />
-        </Grid>
-        <FormLabel sx={{ margin:3 }} component="legend">Assign responsibility</FormLabel>
-       <Box sx={{ display:"flex" ,justifyContent:"center"}} >
-           <FormGroup>
-       
-
-        <Grid item xs={12} m={6}>
-            
-
-          <FormControlLabel
+  
+      
+        <FormLabel sx={{ margin:3 }} component="legend">Payement Methods</FormLabel>
+       <Paper sx={{ display:"flex" }} >
+           
+        <Grid item xs={12} m={6} >
+       <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="deposit"
+            label="DEPOSIT CASH"
           />
         </Grid>
         <Grid item xs={12} m={6}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="EFt"
+            label="EFT"
           />
         </Grid> <Grid item xs={12} m={6}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="cash"
+            label="TRANSFER"
           />
         </Grid>
-        </FormGroup></Box> 
+        </Paper> 
        
-      </Grid>
-    </React.Fragment>
+      </Grid></Box>
+    </>
   );
 }
