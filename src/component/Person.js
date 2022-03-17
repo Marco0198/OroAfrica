@@ -4,10 +4,10 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormLabel from '@mui/material/FormLabel';
-import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
-import  Paper  from '@mui/material/Paper';
+import SearchBar from './SearchBar';
+import Card  from '@mui/material/Card';
 
 
 export default function Person() {
@@ -15,13 +15,18 @@ export default function Person() {
   return (
     <>
    
-      <Box >
+      <Box ><Card>
       <Typography sx={{ textAlign:'left',marginLeft:8}} variant="h6" gutterBottom>
         Person
       </Typography>
-    
-      <Grid container spacing={3} sx={{ width:600 ,margin:5}} >
+      
+      <Grid container spacing={3} sx={{ width:'auto',margin:5}} >
+      <Grid item xs={12}>
+      <SearchBar />
+     </Grid>
+     
         <Grid item xs={12} sm={6}>
+       
           <TextField
             required
             id="firstName"
@@ -90,7 +95,7 @@ export default function Person() {
   
       
         <FormLabel sx={{ margin:3 }} component="legend">Payement Methods</FormLabel>
-       <Paper sx={{ display:"flex" }} >
+       <Grid sx={{ display:"flex"}} >
            
         <Grid item xs={12} m={6} >
        <FormControlLabel
@@ -109,9 +114,9 @@ export default function Person() {
             label="TRANSFER"
           />
         </Grid>
-        </Paper> 
+        </Grid> 
        
-      </Grid></Box>
+      </Grid> </Card> </Box>
     </>
   );
 }

@@ -3,19 +3,14 @@ import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-
-import Typography from '@mui/material/Typography';
-
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Person from './Person';
 import Service from './Service';
 import  Grid from '@mui/material/Grid';
-
+import  Button  from '@mui/material/Button';
 const drawerWidth = '100%';
-
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -41,18 +36,18 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: 'flex',justifyContent:'center' }}>
       <CssBaseline />
      
-      <IconButton
+      <Button
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            sx={{ ml: 2, ...(open && { display: 'none' }) }}
           >
-            <MenuIcon />
-          </IconButton>
+            create person && service
+          </Button>
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: 10,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
