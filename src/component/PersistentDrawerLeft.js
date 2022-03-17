@@ -4,12 +4,11 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Person from './Person';
 import Service from './Service';
 import  Grid from '@mui/material/Grid';
 import  Button  from '@mui/material/Button';
+import CloseIcon from '@mui/icons-material/Close';
 const drawerWidth = '100%';
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -33,21 +32,23 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: 'flex',justifyContent:'center' }}>
+    <Box >
       <CssBaseline />
      
       <Button
-            color="inherit"
+            variant="contained"
+            color="error"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ ml: 2, ...(open && { display: 'none' }) }}
+            sx={{ ml: 0, ...(open && { display: 'none' }),marginLeft:110,marginBottom:5}}
           >
             create person && service
           </Button>
       <Drawer
         sx={{
-          width: 10,
+          width: 2,
+          alignItems:'left',
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
@@ -60,7 +61,7 @@ export default function PersistentDrawerLeft() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <CloseIcon  /> : <CloseIcon  />}
           </IconButton>
         </DrawerHeader>
         <Box sx={{ width: '100%',justifyContent:'center' ,display:'flex'}}>
