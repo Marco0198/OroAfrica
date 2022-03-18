@@ -15,18 +15,15 @@ export default function Person() {
   return (
     <>
    
-      <Box ><Card>
-      <Typography sx={{ textAlign:'left',marginLeft:8}} variant="h6" gutterBottom>
+      <Box ><Card sx={{height:'auto'}}>
+      <Typography sx={{ textAlign:'left',margin:1}} variant="h6" gutterBottom>
         Person
       </Typography>
-      
       <Grid container spacing={3} sx={{ width:'auto',margin:5}} >
       <Grid item xs={12}>
       <SearchBar />
      </Grid>
-     
         <Grid item xs={12} sm={6}>
-       
           <TextField
             required
             id="firstName"
@@ -92,31 +89,29 @@ export default function Person() {
             variant="standard"
           />
         </Grid>
-  
-      
-        <FormLabel sx={{ margin:3 }} component="legend">Payement Methods</FormLabel>
-       <Grid sx={{ display:"flex"}} >
-           
-        <Grid item xs={12} m={6} >
-       <FormControlLabel
+        <FormLabel sx={{ marginTop:3,marginLeft:3 }} component="legend">Payement Methods</FormLabel>
+       <Grid sx={{ display:"flex", margin:2}} >
+       
+       <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="DEPOSIT CASH"
+            label="DEPOSIT "
           />
-        </Grid>
-        <Grid item xs={12} m={6}>
-          <FormControlLabel
+       
+       
+          <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="EFT"
           />
-        </Grid> <Grid item xs={12} m={6}>
-          <FormControlLabel
+       
+          <FormControlLabel sx={{ marginRight:10,}}
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="TRANSFER"
           />
-        </Grid>
+      
         </Grid> 
-       
-      </Grid> </Card> </Box>
+      </Grid> 
+      </Card> 
+      </Box>
     </>
   );
 }
