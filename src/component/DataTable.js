@@ -2,73 +2,49 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  
+  { field: 'Groups', headerName: 'Groups', width: 183 },
+  { field: 'Trade', headerName: 'Trade', width: 180 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
+    field: 'Retail',
+    headerName: 'Retail',
+    width: 180 
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
+    field: 'Discount',
+    headerName: 'Discount',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
-  {
-    field: 'others',
-    headerName: 'Others',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
-  {
-    field: 'mercedes',
-    headerName: 'benz',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+    width: 170,
+    // valueGetter: (params: GridValueGetterParams) =>
+    //   `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+  }
+
+ 
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 2, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 3, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 4, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 5, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 6, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 7, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 8, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 9, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+  { id: 10, Trade: 'Snow', Groups: 'Jon', Discount: 35 ,Retail:'0'},
+
 ];
 
 export default function DataTable() {
   return (
-    <div style={{ height: 400, width:'100%',marginTop:'20px',backgroundColor:'white'}}>
+    <div style={{ height: 635, width:'100%',marginTop:'20px',backgroundColor:'white'}}>
       <DataGrid
         rows={rows}
         columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
+        pageSize={10}
+        rowsPerPageOptions={[1]}
         checkboxSelection
       />
     </div>
