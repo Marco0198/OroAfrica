@@ -20,7 +20,7 @@ export default function Person() {
         Person
       </Typography>
       
-      <Grid container spacing={3} sx={{ width:'auto',margin:5}} >
+      <Grid container spacing={3} sx={{ width:'auto',margin:1}} >
       <Grid item xs={12}>
       <SearchBar />
      </Grid>
