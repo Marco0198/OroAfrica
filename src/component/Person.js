@@ -14,8 +14,8 @@ export default function Person() {
 
   return (
     <>
-   
-      <Box ><Card sx={{height:'auto'}}>
+  
+      <Box ><Card sx={{height:'600px',width:'500px',margin:3}}>
       <Typography sx={{ textAlign:'left',margin:1}} variant="h6" gutterBottom>
         Person
       </Typography>
@@ -91,23 +91,18 @@ export default function Person() {
         </Grid>
         <FormLabel sx={{ marginTop:3,marginLeft:3 }} component="legend">Payement Methods</FormLabel>
        <Grid sx={{ display:"flex", margin:2}} >
-       
        <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="DEPOSIT "
           />
-       
-       
           <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="EFT"
           />
-       
           <FormControlLabel sx={{ marginRight:10,}}
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="TRANSFER"
           />
-      
         </Grid> 
       </Grid> 
       </Card> 

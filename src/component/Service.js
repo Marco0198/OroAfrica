@@ -14,11 +14,11 @@ export default function Service() {
 
   return (
     <>
-      <Box ><Card sx={{ width:'600px' ,marginLeft:2}}>
+      <Box ><Card sx={{height:'600px',width:'500px',margin:3}}>
       <Typography sx={{ textAlign:'left',marginLeft:8}}  variant="h6" gutterBottom>
         Service
       </Typography>  
-      <Grid container spacing={3} sx={{ width:'auto' ,margin:5}} >
+      <Grid container spacing={3} sx={{ width:'auto' ,margin:5}} > 
         <Grid item xs={12} >
           <TextField
             required

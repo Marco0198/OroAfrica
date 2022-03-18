@@ -66,7 +66,7 @@ export default function PersistentDrawerLeft() {
             {theme.direction === 'ltr' ? <CloseIcon  /> : <CloseIcon  />}
           </IconButton>
         </DrawerHeader>
-        <Box sx={{ width: '100%',justifyContent:'center' ,display:'flex'}}>
+        <Box sx={{ width: '100%', height:'50',justifyContent:'center' ,display:'flex'}}>
       <Grid container  sx={{ justifyContent:'center',display:'flex',width: '70%'}}>
         <Grid item xs={6}>
         <Person />
