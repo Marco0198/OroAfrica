@@ -14,12 +14,11 @@ export default function Service() {
 
   return (
     <>
-      <Box ><Card sx={{ width:'auto' ,margin:5}}>
+      <Box ><Card sx={{height:'600px',width:'500px',margin:2}}>
       <Typography sx={{ textAlign:'left',marginLeft:8}}  variant="h6" gutterBottom>
         Service
-      </Typography>
-       
-      <Grid container spacing={3} sx={{ width:'auto' ,margin:5}} >
+      </Typography>  
+      <Grid container spacing={3} sx={{ width:'auto' ,margin:5}} > 
         <Grid item xs={12} >
           <TextField
             required
@@ -42,8 +41,6 @@ export default function Service() {
             variant="standard"
           />
         </Grid>
-    
-   
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -79,32 +76,26 @@ export default function Service() {
           />
         
         </Grid>
-       
-  
-      
         <FormLabel sx={{ margin:3 }} component="legend">Service Type</FormLabel>
        <Grid sx={{ display:"flex" }} >
            
-        <Grid item xs={12} m={6} >
-       <FormControlLabel
+       <Grid sx={{ display:"flex", margin:2}} >
+       <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="Service1"
+            label="Service1 "
           />
-        </Grid>
-        <Grid item xs={12} m={6}>
-          <FormControlLabel
+          <FormControlLabel 
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="Service2"
           />
-        </Grid> <Grid item xs={12} m={6}>
-          <FormControlLabel
+          <FormControlLabel sx={{ marginRight:10,}}
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="Service3 "
+            label="Service3"
           />
-        </Grid>
         </Grid> 
        
-      </Grid></Card></Box>
+      </Grid></Grid>
+      </Card></Box>
     </>
   );
 }

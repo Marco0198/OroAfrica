@@ -50,12 +50,14 @@ export default function PersistentDrawerLeft() {
       <Drawer
         sx={{
           width: 3,
+     
           alignItems:'left',
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
           },
+          
         }}
         variant="persistent"
         anchor="bottom"
@@ -67,7 +69,7 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </DrawerHeader>
         <Box sx={{ width: '100%',justifyContent:'center' ,display:'flex'}}>
-      <Grid container  sx={{ justifyContent:'center',display:'flex',width: '70%'}}>
+      <Grid container  sx={{ justifyContent:'center',display:'flex',width: '60%'}}>
         <Grid item xs={6}>
         <Person />
         </Grid>
