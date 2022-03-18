@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Person from './Person';
 import Service from './Service';
 import  Grid from '@mui/material/Grid';
@@ -41,13 +43,13 @@ export default function PersistentDrawerLeft() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ ml: 0, ...(open && { display: 'none' }),marginLeft:110,marginBottom:5}}
+            sx={{ ml: 10, ...(open && { display: 'none' }),marginLeft:10,margin:5}}
           >
             create person && service
           </Button>
       <Drawer
         sx={{
-          width: 2,
+          width: 3,
           alignItems:'left',
           flexShrink: 0,
           '& .MuiDrawer-paper': {

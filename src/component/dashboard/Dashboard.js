@@ -30,6 +30,9 @@ import Misc from '../Misc';
 import Cam from '../Cam';
 
 import PersistentDrawerLeft from './../PersistentDrawerLeft';
+import DataTable from './../DataTable';
+import  Card  from '@mui/material/Card';
+
 
 
 const drawerWidth = 240;
@@ -158,24 +161,10 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <PersistentDrawerLeft />
-            <Grid container spacing={3}>
-              {/* Chart */}
-              <Grid item xs={12} md={6} >
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                 
-                  <Chart />
-                </Paper>
-              </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={6} >
+            
+            <Grid container spacing={1}>
+          
+              <Grid item xs={12} md={4} lg={4} >
                 <Box
                   sx={{
                     p: 2,
@@ -234,14 +223,22 @@ function DashboardContent() {
               </AccordionDetails>
             </Accordion>
           </div>
+          <PersistentDrawerLeft />
                 </Box>
               </Grid>
-              {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
-                  
-                </Paper>
+              <Grid item xs={12} md={4} lg={8}>
+                <Box
+                  sx={{
+
+                    display: 'flex',
+                    justifyContent:"center",
+                    flexDirection: 'row',
+                    height: 'auto',
+                  }}
+                >
+                 
+                  <DataTable  />
+                </Box>
               </Grid>
             </Grid>
            

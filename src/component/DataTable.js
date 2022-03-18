@@ -63,7 +63,7 @@ const rows = [
 
 export default function DataTable() {
   return (
-    <div style={{ height: 400, width:1000,marginTop:'50px',marginLeft:'20px'}}>
+    <div style={{ height: 400, width:'100%',marginTop:'20px',backgroundColor:'white'}}>
       <DataGrid
         rows={rows}
         columns={columns}
