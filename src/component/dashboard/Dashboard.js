@@ -27,6 +27,7 @@ import Cam from '../Cam';
 
 import PersistentDrawerLeft from './../PersistentDrawerLeft';
 import DataTable from './../DataTable';
+import Footer from './../Footer';
 
 
 
@@ -239,7 +240,7 @@ function DashboardContent() {
           </Container>
         </Box>
       </Box>
-      
+      <Footer />
     </ThemeProvider>
   );
 }
